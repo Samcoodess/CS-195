@@ -46,12 +46,12 @@ while score<=100 or currentHealth>=0:
                                         pass
                         print(f"Do you wanna fight with this {youGot}? \n (ง︡'-'︠)ง")
                         response=input("enter y for yes, and n for no \n")
-                        if response == "y":
+                        if response =='y':
                                 print(f'You killed the {youGot}')
                                 if youGot=="monster":
                                         score+=10
                                         print(f"Your score is now {score}") 
-                                        ans=input="press enter to keep walking"
+                                        ans=input("press enter to keep walking")
                                         print(ans)
                                         
                                         print("Let's keep walking then")
@@ -60,8 +60,8 @@ while score<=100 or currentHealth>=0:
                                 else:
                                         score+=1
                                         print(f"Your score is now {score}")
-                                        print("press enter to keep walking ")
-                                        input=""
+                                        ans=input("press enter to keep walking")
+                                        print(ans)
                                         print("Let's keep walking then")
                                         print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                                         continue
@@ -81,14 +81,14 @@ while score<=100 or currentHealth>=0:
                                 print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                                 continue
                         else:
-                                print(f"You got {userItem}\n It will be helpful to fight with creatures\n ฅʕ•̫͡•ʔฅ ")
+                                print(f"You got {youGot}\n It will be helpful to fight with creatures\n ฅʕ•̫͡•ʔฅ ")
                                 print("Do you want to take shield?")
                                 response=input("Enter y for yes and n for no >>")
                                 if response== "y":
                                         userItem+=(youGot,)
                                         continue
                                 else:
-                                        ans=input="press enter to keep walking"
+                                        ans=input("press enter to keep walking")
                                         print(ans)
                                         print("Let's keep walking then")
                                         print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
