@@ -1,19 +1,15 @@
 
 import random
 
- 
-score=0
-coins=0
-currentHealth =20
-userItem = (1,)
-while score<=100 or currentHealth>=0:
-        print("\033[4\033[2J",end="")
+print("\033[4\033[2J",end="")
+score,coins,currentHealth,userItem=0,0,20,()
+
+if score<=100 and currentHealth>=0:
+        # print("\033[4\033[2J",end="")
+        print(f'score={score}  current health= {currentHealth}    coins={coins}\n\n')
         pass
 
-        while True:
-                print(f'score={score}  current health= {currentHealth}    coins={coins}\n\n')
-
-                  
+        while True:     
                 print("****** :) You are walking :) ****** ")
                 print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                 print(" Oh...Looks like you encountered with something,it can even be monster :=~~~~")
@@ -51,9 +47,10 @@ while score<=100 or currentHealth>=0:
                                 if youGot=="monster":
                                         score+=10
                                         print(f"Your score is now {score}") 
+                                        
                                         ans=input("press enter to keep walking")
                                         print(ans)
-                                        
+                                        # print("\033[4\033[2J",end="")
                                         print("Let's keep walking then")
                                         print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                                         continue
@@ -62,6 +59,7 @@ while score<=100 or currentHealth>=0:
                                         print(f"Your score is now {score}")
                                         ans=input("press enter to keep walking")
                                         print(ans)
+                                        # print("\033[4\033[2J",end="")
                                         print("Let's keep walking then")
                                         print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                                         continue
@@ -78,18 +76,23 @@ while score<=100 or currentHealth>=0:
                                 print(f"You already have {youGot}.Let's not make bag heavy ╰(◕ヮ◕)つ  \n")
                                 ans=input="press enter to keep walking"
                                 print(ans)
+                                # print("\033[4\033[2J",end="")
                                 print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                                 continue
                         else:
                                 print(f"You got {youGot}\n It will be helpful to fight with creatures\n ฅʕ•̫͡•ʔฅ ")
                                 print("Do you want to take shield?")
-                                response=input("Enter y for yes and n for no >>")
-                                if response== "y":
-                                        userItem+=(youGot,)
+                                response=input("enter y for yes, and n for no \n")
+                                if response =='y':
+                                        tuple=(youGot,)
+                                        userItem+=tuple
+                                        print(f'This is your item list {userItem}')
+                                
                                         continue
                                 else:
                                         ans=input("press enter to keep walking")
                                         print(ans)
+                                        # print("\033[4\033[2J",end="")
                                         print("Let's keep walking then")
                                         print("ᕕ( ᐛ )ᕗ........ᕕ( ᐛ )ᕗ..\n")
                                         continue
