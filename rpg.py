@@ -13,14 +13,12 @@ while score<=100 or currentHealth>=0:
 
         while True:     
                 print("****** :) You are walking :) ****** ")
-                print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                 print(" Oh...Looks like you encountered with something,it can even be monster :=~~~~")
                 print("let's see..what it is")
-                print("(づ ͠°_ °)づ\n")
                 youGot=random.choice(allChoices)
                 if youGot in creatures:
                         if youGot=='monster':
-                                print("Ooopss |⚆﹏⚆ |  \n :=~~~~~~ this monster with long tongue just attacked you ")
+                                print("Ooopss   \n :=~~~~~~ this monster with long tongue just attacked you ")
                                 attackAmount= 7- len(userItem)
                                 currentHealth-=attackAmount
                                 print(f'your current Health is now {currentHealth}')
@@ -45,7 +43,7 @@ while score<=100 or currentHealth>=0:
                                         print(ans)
                                         # print("\033[4\033[2J",end="")
                                         print("Let's keep walking then")
-                                        print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
+                                        
                                         continue
                                 else:
                                         score+=1
@@ -54,7 +52,7 @@ while score<=100 or currentHealth>=0:
                                         print(ans)
                                         # print("\033[4\033[2J",end="")
                                         print("Let's keep walking then")
-                                        print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
+                                        
                                         continue
 
 
@@ -66,7 +64,7 @@ while score<=100 or currentHealth>=0:
                                 ans=input="press enter to keep walking"
                                 print(ans)
                                 # print("\033[4\033[2J",end="")
-                                print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
+                                
                                 continue
                         else:
                                 print(f"You got {youGot}\n It will be helpful to fight with creatures\n ฅʕ•̫͡•ʔฅ ")
@@ -83,7 +81,7 @@ while score<=100 or currentHealth>=0:
                                         print(ans)
                                         # print("\033[4\033[2J",end="")
                                         print("Let's keep walking then")
-                                        print("ᕕ( ᐛ )ᕗ........ᕕ( ᐛ )ᕗ..\n")
+                                        
                                         continue
         
 if score>=100:
