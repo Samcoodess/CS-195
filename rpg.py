@@ -1,11 +1,7 @@
-
-import random
-
-print("\033[4\033[2J",end="")
-score,coins,currentHealth,userItem=0,0,20,()
-
-if score<=100 and currentHealth>=0:
-        # print("\033[4\033[2J",end="")
+score,coins,currentHealth=0,0,20
+userItem=()
+while score<=100 or currentHealth>=0:
+        print("\033[4\033[2J",end="")
         print(f'score={score}  current health= {currentHealth}    coins={coins}\n\n')
         pass
 
@@ -18,6 +14,7 @@ if score<=100 and currentHealth>=0:
                 creatures=('monster','fox')
                 items=('shield','boots')
                 allChoices=creatures+items
+                import random
                 youGot=random.choice(allChoices)
                 for youGot in creatures:
                         if youGot=='monster':
