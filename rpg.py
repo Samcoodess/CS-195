@@ -91,7 +91,7 @@ while score<=100 or currentHealth>=0:
                                         ans=input("press enter to keep walking")
                                         print(ans)
                                         print("Let's keep walking then")
-                                        print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
+                                        print("ᕕ( ᐛ )ᕗ........ᕕ( ᐛ )ᕗ..\n")
                                         continue
         
 
