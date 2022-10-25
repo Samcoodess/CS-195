@@ -1,9 +1,15 @@
+import random
+
+creatures=('monster','fox')
+items=('shield','boots')
 score,coins,currentHealth=0,0,20
 userItem=()
+allChoices=creatures+items
+
 while score<=100 or currentHealth>=0:
         print("\033[4\033[2J",end="")
         print(f'score={score}  current health= {currentHealth}    coins={coins}\n\n')
-        pass
+        # pass
 
         while True:     
                 print("****** :) You are walking :) ****** ")
@@ -11,12 +17,8 @@ while score<=100 or currentHealth>=0:
                 print(" Oh...Looks like you encountered with something,it can even be monster :=~~~~")
                 print("let's see..what it is")
                 print("(づ ͠°_ °)づ\n")
-                creatures=('monster','fox')
-                items=('shield','boots')
-                allChoices=creatures+items
-                import random
                 youGot=random.choice(allChoices)
-                for youGot in creatures:
+                if youGot in creatures:
                         if youGot=='monster':
                                 print("Ooopss |⚆﹏⚆ |  \n :=~~~~~~ this monster with long tongue just attacked you ")
                                 attackAmount= 7- len(userItem)
@@ -24,19 +26,13 @@ while score<=100 or currentHealth>=0:
                                 print(f'your current Health is now {currentHealth}')
                                 if currentHealth<=0:
                                         break
-                                else:
-                                        pass
+                                # else:
+                                #         pass
                                
                                 
                         else:
                                 print(f"you got attacked by {youGot}")
-                                attackAmount=7-len(userItem)
-                                currentHealth-=attackAmount
-                                print(f'your current Health is now {currentHealth}')
-                                if currentHealth<=0:
-                                        break
-                                else:
-                                        pass
+                                
                         print(f"Do you wanna fight with this {youGot}? \n (ง︡'-'︠)ง")
                         response=input("enter y for yes, and n for no \n")
                         if response =='y':
@@ -60,16 +56,12 @@ while score<=100 or currentHealth>=0:
                                         print("Let's keep walking then")
                                         print("ᕕ( ᐛ )ᕗ.......ᕕ( ᐛ )ᕗ..\n")
                                         continue
-                        if score>=100:
-                                print("You won the game. \n 🏆ヽ(≧▿≦)ノ ")
-                                print("Here is your trophy.")
-                                break                        
 
 
         
                                 
-                for youGot in items:
-                        for youGot in userItem:
+                if youGot in items:
+                        if youGot in userItem:
                                 print(f"You already have {youGot}.Let's not make bag heavy ╰(◕ヮ◕)つ  \n")
                                 ans=input="press enter to keep walking"
                                 print(ans)
@@ -81,8 +73,8 @@ while score<=100 or currentHealth>=0:
                                 print("Do you want to take shield?")
                                 response=input("enter y for yes, and n for no \n")
                                 if response =='y':
-                                        tuple=(youGot,)
-                                        userItem+=tuple
+                                        updatedUserItem=(youGot,)
+                                        userItem+=updatedUserItem
                                         print(f'This is your item list {userItem}')
                                 
                                         continue
@@ -94,6 +86,10 @@ while score<=100 or currentHealth>=0:
                                         print("ᕕ( ᐛ )ᕗ........ᕕ( ᐛ )ᕗ..\n")
                                         continue
         
+if score>=100:
+        print("You won the game. \n 🏆ヽ(≧▿≦)ノ ")
+        print("Here is your trophy.")
+                                
 
                                 
 
