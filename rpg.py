@@ -68,7 +68,7 @@ while score<=100 or currentHealth>=0:
                                 continue
                         else:
                                 print(f"You got {youGot}\n It will be helpful to fight with creatures\n ฅʕ•̫͡•ʔฅ ")
-                                print("Do you want to take shield?")
+                                print(f"Do you want to take {youGot}?")
                                 response=input("enter y for yes, and n for no \n")
                                 if response =='y':
                                         updatedUserItem=(youGot,)
