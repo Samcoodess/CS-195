@@ -31,7 +31,7 @@ while score<=100 or currentHealth>=0:
                         
                 if True:        
                         print(f"Do you wanna fight with this {youGot}? \n (ง︡'-'︠)ง")
-                        playerResponse=input("enter y for yes, and n for no ")
+                        playerResponse = input('blay')
                 
                         if str(playerResponse) =='y':
                                 print(f'You killed the {youGot}')
