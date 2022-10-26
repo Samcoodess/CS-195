@@ -31,30 +31,31 @@ while score<=100 or currentHealth>=0:
                 else:
                         print(f"you got attacked by {youGot}")
                         
-                print(f"Do you wanna fight with this {youGot}? \n (ง︡'-'︠)ง")
-                playerResponse=input("enter y for yes, and n for no ")
+                if True:        
+                        print(f"Do you wanna fight with this {youGot}? \n (ง︡'-'︠)ง")
+                        playerResponse=input("enter y for yes, and n for no ")
                 
-                if playerResponse =='y':
-                        print(f'You killed the {youGot}')
-                        if youGot=="monster":
-                                score+=10
-                                print(f"Your score is now {score}") 
-                                
-                                ans=input("press enter to keep walking")
-                                print(ans)
-                                # print("\033[4\033[2J",end="")
-                                print("Let's keep walking then")
-                                
-                                continue
-                        else:
-                                score+=1
-                                print(f"Your score is now {score}")
-                                ans=input("press enter to keep walking")
-                                print(ans)
-                                # print("\033[4\033[2J",end="")
-                                print("Let's keep walking then")
-                                
-                                continue
+                        if str(playerResponse) =='y':
+                                print(f'You killed the {youGot}')
+                                if youGot=="monster":
+                                        score+=10
+                                        print(f"Your score is now {score}") 
+                                        
+                                        ans=input("press enter to keep walking")
+                                        print(ans)
+                                        # print("\033[4\033[2J",end="")
+                                        print("Let's keep walking then")
+                                        
+                                        continue
+                                else:
+                                        score+=1
+                                        print(f"Your score is now {score}")
+                                        ans=input("press enter to keep walking")
+                                        print(ans)
+                                        # print("\033[4\033[2J",end="")
+                                        print("Let's keep walking then")
+                                        
+                                        continue
 
 
 
@@ -70,8 +71,8 @@ while score<=100 or currentHealth>=0:
                 else:
                         print(f"You got {youGot}\n It will be helpful to fight with creatures\n ฅʕ•̫͡•ʔฅ ")
                         print(f"Do you want to take {youGot}?")
-                        response=input("enter y for yes, and n for no \n")
-                        if response =='y':
+                        response_2=input("enter y for yes, and n for no \n")
+                        if str(response_2) =='y':
                                 updatedUserItem=(youGot,)
                                 userItem+=updatedUserItem
                                 print(f'This is your item list {userItem}')
@@ -89,7 +90,8 @@ if score>=100:
         print("You won the game. \n 🏆ヽ(≧▿≦)ノ ")
         print("Here is your trophy.")
                                 
-
+elif currentHealth<=0:
+        print("Better luck from next time")
                                 
 
 
