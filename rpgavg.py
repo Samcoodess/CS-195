@@ -8,7 +8,7 @@ score,coins,currentHealth=0,0,20
 userItem=()
 allChoices=creatures+items
 for i in range(1,10):  
-        if score<=0:
+        while score<=100 or currentHealth>=0:
                 print("****** :) You are walking :) ****** ")
                 print(" Oh...Looks like you encountered with something,it can even be monster :=~~~~")
                 print("let's see..what it is")
@@ -29,28 +29,28 @@ for i in range(1,10):
                         else:
                                 print(f"you got attacked by {youGot}")
                             
-                        if True:        
+                                
                             
-                                    print(f'You killed the {youGot}')
-                                    if youGot=="monster":
-                                            score+=10
-                                            print(f"Your score is now {score}")
-                                            scoreCollection+=(score,) 
-                                            
-                                            
-                                            
-                                            print("Let's keep walking then")
-                                            
-                                            continue
-                                    else:
-                                            score+=1
-                                            print(f"Your score is now {score}")
-                                            scoreCollection+=(score,)
-                                            
-                                            
-                                            print("Let's keep walking then")
-                                            
-                                            continue
+                        print(f'You killed the {youGot}')
+                        if youGot=="monster":
+                                score+=10
+                                print(f"Your score is now {score}")
+                                scoreCollection+=(score,) 
+                                
+                                
+                                
+                                print("Let's keep walking then")
+                                
+                                continue
+                        else:
+                                score+=1
+                                print(f"Your score is now {score}")
+                                scoreCollection+=(score,)
+                                
+                                
+                                print("Let's keep walking then")
+                                
+                                continue
 
 
 
@@ -72,25 +72,26 @@ for i in range(1,10):
                             
                         
             
-        if score>=100:
-                print("You won the game. \n 🏆ヽ(≧▿≦)ノ ")
-                print("Here is your trophy.")
+                if score>=100:
+                        print("You won the game. \n 🏆ヽ(≧▿≦)ノ ")
+                        print("Here is your trophy.")
 
-        win=win+1               
-                                        
-        if currentHealth<=0:
-                print("Better luck from next time")
-        loss=loss+1
+                win=win+1        
+                                                
+                if currentHealth<=0:
+                        print("Better luck from next time")
         score=0
+        currentHealth=0
+                
           
              
 print(f"You had {win} wins")
 print(f"you had {loss} losses")
-# winR=(win-loss)/win
+winR=win/1000
 # winRate=winR*0.01
 scoreSum= sum(scoreCollection)
 averageScores=scoreSum/len(scoreCollection)
-# print(f"The winrate is {winRate}%")
+print(f"The winrate is {winR*100}%")
 print(f"The average score is {int(averageScores)}")
             
 
