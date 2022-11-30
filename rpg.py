@@ -72,7 +72,7 @@ while score<=100 or currentHealth>=0:
                                 print(f"Your score is now {score}") 
                                 
                                 #press enter to keep walking
-                                ans=input("press enter to keep walking")
+                                ans=input("press enter to keep walking>>")
                                 print(ans)
                                 print("Let's keep walking then")
                                 # continue
@@ -85,7 +85,7 @@ while score<=100 or currentHealth>=0:
                                 print(f"Your score is now {score}")
                                 
                                 #press enter to keep walking
-                                ans=input("press enter to keep walking")
+                                ans=input("press enter to keep walking>>>")
                                 print(ans)
                                 print("Let's keep walking then")
                                 
@@ -101,7 +101,7 @@ while score<=100 or currentHealth>=0:
                         
                         #if user has the item, keep moving
                         print(f"You already have {youGot}.Let's not make bag heavy ╰(◕ヮ◕)つ  \n")
-                        ans=input("press enter to keep walking")
+                        ans=input("press enter to keep walking>>>")
                         print(ans)
                        
                         
@@ -125,7 +125,7 @@ while score<=100 or currentHealth>=0:
                         
                         #if user had said n, keep moving
                         else:
-                                ans=input("press enter to keep walking")
+                                ans=input("press enter to keep walking>>>")
                                 print(ans)
                               
                                 print("Let's keep walking then")
@@ -134,8 +134,8 @@ while score<=100 or currentHealth>=0:
                         
         #if user got object, that isnt't in creatures, items, then run this
         elif youGot in otherThings:
-                print(f"Oh..it's just a {otherThings}")
-                ans=input("press enter to keep walking")
+                print(f"Oh..it's just a {youGot}")
+                ans=input("press enter to keep walking>>>")
                 print(ans)
                 continue
                 
