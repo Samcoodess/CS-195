@@ -1,46 +1,40 @@
-import numpy as np
-import warnings
+import random
 
-# print("\033[4\033[2J",end="")
-Board = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9],])
-Board2 = np.array([np.array([1, 2, 3], [4, 5, 6], [7, 8, 9])])
-print(Board)
-print(Board2)
-
-# Board_List = list(Board)
-# print(type(Board_List))
-# # print(Board)
-# # print(Board_List)
-# winners =[ (1,2,3),(4,5,6),(7,8,9),(1,4,7),(2,5,8),(3,6,9),(1,5,9),(3,5,7)]
-# # print(len(Board))
-# # Board2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9],])
-
-# for Board_spaces in Board: 
-#     print(Board_spaces)
-
-# def win():
-#     win=False
-#     if winners in Board:
-#         return False
-    
-# while win!=True:    
-#     def player1():
+board_list=list(range(1,10))
+board= ("""
+{} | {} | {}
+---+---+---
+{} | {} | {}
+---+---+---
+{} | {} | {}
+""").format(*board_list)
+print(board)  
+print(board_list)  
+       
+# def tic_tac_toe(resp1:int):
+def player1(resp1:int):
+    # assert resp1 in range(1,10),"Your response must be between 1 and 9"
+    if int(resp1) in range(1,10):
+        board_list[int(resp1)]="0"
+        print(board_list)
         
-#             resp1= input("Where do you want to mark your O?\n >>")
-#             # Board[resp1]=2
-#             # Board[Board==resp1]=2
-#             for i in range(0,9):
-#                 if Board_List[i]==resp1:
-#                     Board_List.append("O")
-                
-#                 # print( resp1 in Board)
-#             # Board[resp1 in Board]=2
+        print(resp1)
+    return resp1
 
-#             # print(Board)
-#     player1()    
+player1(resp1=input("Where do you want to place your O?>>"))
+
+def player2(resp2:int):
+    # assert resp1 in range(1,10),"Your response must be between 1 and 9"
+    if int(resp2) in range(1,10):
+        board_list[int(resp2)]="0"
+        print(board_list)
         
- 
+        print(resp2)
+    return resp2
+
+player2(resp2=input("Where do you want to place your O?>>"))
+# tic_tac_toe()    
         
         
-
+        
 
