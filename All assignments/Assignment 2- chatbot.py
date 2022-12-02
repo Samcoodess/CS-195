@@ -11,7 +11,7 @@ print ("Hi " +name + " I am bot:your personal friend i.e Botfriend")
 #Ask user their height  
 height= input("How tall are you  in metre ? "+name+ " >>")
 
-#Calculate how many you's are required to reach the moon and print it
+#Calculate howmany you's are required to reach the moon and print it
 numberOfYouToReachMoon = int(DISTANCE_To_The_MOON/float(height))
 print("Oh, we will require " + str(numberOfYouToReachMoon)+ " of you to reach the moon.")
 

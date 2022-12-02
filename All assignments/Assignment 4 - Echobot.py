@@ -9,7 +9,7 @@ print("Hello")
 userResponse= input("Enter anything>> ")
 
 #compare user's input and run the file until the user inputs q
-while userResponse.lower() != "q":
+while userResponse.lower() != 'q':
     print(f"Well {userResponse.lower()} right back at ya")
     userResponse= input("Enter again>>> ")
 
